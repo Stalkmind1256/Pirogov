@@ -1,0 +1,8 @@
+CREATE TABLE "patients"
+(
+    "id" SERIAL PRIMARY KEY,
+    "fio" varchar,
+    "date_of_birth" date,
+    "number_of_phone" varchar,
+    "pasport" varchar
+)

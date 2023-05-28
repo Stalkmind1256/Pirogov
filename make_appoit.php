@@ -1,31 +1,34 @@
 <?php
-$host = "localhost";
-$port = "5432";
-$dbname="poliklinnika";
-$usrname="postgres";
-$pword="123456";
-
-$connect = pg_connect("host=$host port=$port dbname=$dbname username=$usrname passpord=$pword");
-
-/*if(!$connect){
-    echo("Ошибка подключения к базе данных");
-}
-else{
-    echo "Успешное подключение к базе данных";
-}
-pg_close($connect);
+session_start();
 ?>
-*/
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $patient_name = $_POST['patient_name'];
-    $patient_surname = $_POST['patient_name'];
-    $patient_phone_number = $_POST['patient_name'];
-    $patient_pasport = $_POST['patient_name'];
-    $patient_data_appointment = $_POST['patient_name'];
-    $patient_time_appointment = $_POST['patient_name'];
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"type="text/css" href="CSS/appoitm.css">
+    <title>Запись на прием</title>
+</head>
+<body>
+<div class="header"><h1>Поликлинника</h1></div>
+<div class="menu"></div>
+<form action="signin.php"  method="post">
+    <h1>Регистрация</h1>
+    <label>ФИО</label>
+    <input type="text" name="fio" placeholder="Введите свое полное имя">
+    <label>Дата рождения</label>
+    <input type="text" name="date_of_birth" placeholder="Введите свою дату рождения">
+    <label>Номер телефона</label>
+    <input type="text" name="number_of_phone" placeholder="Введите свой номер телеофна">
+    <label>Паспорт</label>
+    <input type="text" name="passport" placeholder="Введите номер паспорта">
+    <button class="btn">Записаться</button>
+</form>
 
-}
+</body>
+</html>
+
+
 
 
 ?>
