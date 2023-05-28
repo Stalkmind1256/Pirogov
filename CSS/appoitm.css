@@ -11,13 +11,15 @@
 }
 .menu{
     background-color: antiquewhite;
-    height: 621px;
+    height: 700px;
 }
 body{
     background-color: white;
     font-family:Gotham, sans-serif;
 }
 form{
+    display: flex;
+    flex-direction: column;
     max-width: 600px;
     position: absolute;
     padding: 30px;
@@ -27,24 +29,19 @@ form{
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
 label{
-    display: block;
+    display:block;
     margin-bottom: 10px;
     margin-left: 0px;
 }
-input[type="text"]{
+input{
+    width: 200px;
+    margin: 10px 0;
     padding: 5px 2px;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 1px;
+    border:unset;
+    border-bottom: 2px solid #e3e3e3;
+    outline: none;
 }
-input[type="submit"]{
-    background-color: #333333;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    margin-bottom: 50px;
-    margin-top: 30px;
-    cursor: pointer;
-    display: block;
+.btn{
+    padding: 10px;
+    background:#e3e3e3;
 }
