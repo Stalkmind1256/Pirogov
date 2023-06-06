@@ -27,3 +27,12 @@ button{
     background-color: antiquewhite;
     height: 621px;
 }
+.btn{
+    padding: 9px 18px;
+    font-size: 18px;
+    color: #333333;
+    position: absolute;
+    left: 220px;
+    border-radius: 5px;
+    cursor:pointer;
+}
