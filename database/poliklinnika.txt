@@ -4,5 +4,46 @@ CREATE TABLE "patients"
     "fio" varchar,
     "date_of_birth" date,
     "number_of_phone" varchar,
-    "pasport" varchar
+    "passport" varchar
 )
+------------------------------------------------
+create table if not exists public.appointment
+(
+    id          serial
+        primary key,
+    id_patients integer
+        references public.patients,
+    id_doctors  integer
+        references public.doctors,
+    date        date,
+    time        time
+);
+
+alter table public.appointment
+    owner to postgres;
+
+-----------------------------------------------
+create table if not exists public.diagnosis
+(
+    id          serial
+        primary key,
+    name        text not null,
+    discription text
+);
+
+alter table public.diagnosis
+    owner to postgres;
+---------------------------------------------------
+create table if not exists public.doctors
+(
+    id                serial
+        primary key,
+    fio               varchar,
+    specializations   varchar,
+    number_of_phone   varchar,
+    number_of_cabinet integer
+);
+
+alter table public.doctors
+    owner to postgres;
+

@@ -6,7 +6,7 @@ session_start();
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet"type="text/css" href="CSS/appoitm.css">
+    <link rel="stylesheet"type="text/css" href="CSSs/appoitm.css">
     <title>Запись на прием</title>
 </head>
 <body>
