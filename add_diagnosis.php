@@ -15,9 +15,9 @@ session_start();
 <form action="addiagn.php"  method="post">
     <h1></h1>
     <label>Название</label>
-    <input type="text" name="name" placeholder="Введите название диагноза">
+    <input type="text" name="name" placeholder="Введите название диагноза" required>
     <label>Информация</label>
-    <input type="text" name="discription" placeholder="Введите информацию о диагнозе">
+    <input type="text" name="discription" placeholder="Введите информацию о диагнозе" required>
     <button class="btn">Добавить</button>
 </form>
 
