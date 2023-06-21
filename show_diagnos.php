@@ -1,11 +1,10 @@
 <?php
-error_reporting(E_ALL);
 
 print "<html>";
 print "<head>";
 print '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">';
 print "<title>";
-print "Пациенты";
+print "Список диагнозов";
 print "</title>";
 print "</head>";
 print "<body>";
@@ -30,7 +29,7 @@ if (!$res) {
     die("Ошибка: Не удалось выполнить запрос (pg_query)!");
 }
 
-// вывод данных в браузер
+// вывод данныхо о диагнозах в браузер
 echo "<table>";
 echo "<tr><th></th><th>Название диагноза</th><th>Информация о диагнозе</th></tr>";
 

@@ -1,12 +1,10 @@
 <?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet"type="text/css" href="CSSs/appoitm.css">
     <title>Добавить врача</title>
 </head>
 <body>

@@ -15,9 +15,19 @@ if (!$connect) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $discription = $_POST['discription'];
+
+    // Проверяем, есть ли уже такой диагноз c таким названием в базе данных
+    $query_check = "SELECT COUNT(*) FROM public.diagnosis WHERE name = '$name' AND discription = '$discription'";
+    $res_check = pg_query($connect, $query_check);
+    $count = pg_fetch_row($res_check)[0];
+    if ($count > 0) {
+        echo "<script>alert('Такой диагноз уже существует в базе данных!');</script>";
+        echo "<script>location.href='index.php';</script>";
+        exit();
+    }
 }
+
 $query = "INSERT INTO public.diagnosis (name, discription) VALUES('$name','$discription')";
-//$query = "INSERT INTO public.patients (fio, date_of_birth,number_of_phone,passport) VALUES('" . pg_escape_string($fio) . "', '" . pg_escape_string($date_of_birth) . "', '" . pg_escape_string($number_of_phone) . "', '" . pg_escape_string($passport)."')";
 $res = pg_query($connect, $query);
 if ($res) {
     echo "<script>alert('Диагноз успешно добавлен!');</script>";

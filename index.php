@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css"href="CSSs/style.css">
     <title>Поликлинника</title>
 </head>
 <body>
@@ -12,9 +11,9 @@
     <button onclick="location.href='show_patients.php'">Просмотр пациентов</button>
     <button onclick="location.href='add_doctors.php'">Добавить врача</button>
     <button onclick="location.href='show_doctors.php'">Просмотреть список врачей</button>
-    <button onclick="location.href='show_app.php'">Просмотреть приемы</button>
+    <button onclick="location.href='show_app.php'">Добавить приемы</button>
     <button onclick="location.href='add_diagnosis.php'">Добавить Диагноз</button>
-    <button onclick="location.href='show_diagnos.php'">Показать Диагноз</button>
+    <button onclick="location.href='show_diagnos.php'">Просмотреть список Диагнозов</button>
 </div>
 </body>
 </html>
