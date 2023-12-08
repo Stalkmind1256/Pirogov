@@ -1,0 +1,35 @@
+create Table "doctors" (
+"id" serial primary key,
+"fio" varchar,
+"specializations" varchar,
+"number_of_phone" varchar,
+"number_of_cabinet" integer
+)
+create Table "patients" (
+"id" serial primary key,
+"fio" varchar,
+"date_of_birth" date,
+"number_of_phone" varchar,
+"passport" varchar
+)
+create Table "diagnosis" (
+"id" serial primary key,
+"name" varchar,
+"discription" varchar
+)
+create Table "appointment" (
+"id" serial primary key,
+"id_patients" integer,
+"id_doctors" integer,
+"date" date,
+"time" time
+)
+alter table "appointment" add constraint "app_doc_id_fkey" foreign key ("id_doctors") references "doctors" ("id")
+alter table "appointment" add constraint "app_pats_id_fkey" foreign key ("id_patients") references "patients" ("id")
+
+create Table "app_diagnosis" (
+"app_id" integer,
+"diagn_id" integer
+)
+alter table "app_diagnosis" add constraint "appdiag_id_fkey" foreign key ("diagn_id") references "appointment" ("id")
+alter table "app_diagnosis" add constraint "appdiag_id_fkey" foreign key ("app_id") references "diagnosis" ("id")
